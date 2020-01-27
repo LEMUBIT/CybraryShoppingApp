@@ -2,6 +2,7 @@ package com.lemubit.lemuel.cybraryshoppingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         EditText etxtItem = findViewById(R.id.etxt_new_item);
         Button button = findViewById(R.id.btn_add);
 
-        mViewmodel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
+        mViewmodel = new ViewModelProvider(this).get(MainActivityViewModel.class);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

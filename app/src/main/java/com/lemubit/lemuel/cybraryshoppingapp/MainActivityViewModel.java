@@ -18,7 +18,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
-        itemRepository= new ItemRepository(application.getApplicationContext());
+        itemRepository= new ItemRepository(application. getApplicationContext());
         items= itemRepository.getItems();
         itemCount= itemRepository.getItemCount();
 
